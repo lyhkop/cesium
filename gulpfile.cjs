@@ -33,6 +33,8 @@ const rollup = require("rollup");
 const rollupPluginStripPragma = require("rollup-plugin-strip-pragma");
 const rollupPluginExternalGlobals = require("rollup-plugin-external-globals");
 const rollupPluginUglify = require("rollup-plugin-uglify");
+const rollupCommonjs = require("@rollup/plugin-commonjs");
+const rollupResolve = require("@rollup/plugin-node-resolve").default;
 const cleanCSS = require("gulp-clean-css");
 const typescript = require("typescript");
 
@@ -75,6 +77,7 @@ const sourceFiles = [
   "!Source/ThirdParty/google-earth-dbroot-parser.js",
   "!Source/ThirdParty/pako_inflate.js",
   "!Source/ThirdParty/crunch.js",
+  "!Source/ThirdParty/ThirdParty.js",
 ];
 
 const watchedFiles = [
@@ -176,8 +179,21 @@ function createWorkers() {
     });
 }
 
-gulp.task("build", function () {
+async function buildThirdParty() {
+  const bundle = await rollup.rollup({
+    input: "ThirdParty/ThirdParty.js",
+    plugins: [rollupResolve(), rollupCommonjs()],
+  });
+
+  bundle.write({
+    file: "Source/ThirdParty/ThirdParty.js",
+    format: "es",
+  });
+}
+
+gulp.task("build", async function () {
   mkdirp.sync("Build");
+  await buildThirdParty();
   fs.writeFileSync(
     "Build/package.json",
     JSON.stringify({
@@ -1466,6 +1482,12 @@ function createCesiumJs() {
       os.EOL;
   });
 
+  // While technically third-party libraries are not part of the public API, we need to re-export
+  // some here or we'll break a lot of applications.
+  // TODO: Compare to Cesium.js in master and make sure Source/Cesium.js files match.
+  contents +=
+    "export { Autolinker, earcut, when, Tween, RBush, KDBush, topojson } from './ThirdParty/ThirdParty.js';" +
+    os.EOL;
   fs.writeFileSync("Source/Cesium.js", contents);
 }
 

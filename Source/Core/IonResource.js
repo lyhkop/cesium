@@ -1,5 +1,5 @@
 import Uri from "../ThirdParty/Uri.js";
-import when from "../ThirdParty/when.js";
+import { when } from "../ThirdParty/ThirdParty.js";
 import Check from "./Check.js";
 import Credit from "./Credit.js";
 import defaultValue from "./defaultValue.js";

@@ -1,4 +1,4 @@
-import when from "../ThirdParty/when.js";
+import { when } from "../ThirdParty/ThirdParty.js";
 import Cartesian2 from "./Cartesian2.js";
 import defined from "./defined.js";
 import DeveloperError from "./DeveloperError.js";

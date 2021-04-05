@@ -1,4 +1,4 @@
-import when from "../ThirdParty/when.js";
+import { when } from "../ThirdParty/ThirdParty.js";
 import Check from "./Check.js";
 
 /**
