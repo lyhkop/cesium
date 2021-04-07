@@ -1,0 +1,185 @@
+{
+    "code": 200,
+    "data": [
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        },
+        {
+            "idcard": "123456",
+            "rylb": "0",
+            "jyname": "shike",
+            "dsjh": "234",
+            "layer": "2",
+            "status": "3",
+            "isDangerous": false,
+            "behaviorStatus": "3",
+            "policeManPosition": {
+                "x": 0.0,
+                "y": 5.0,
+                "z": 10.0
+            }
+        }
+    ]
+}
