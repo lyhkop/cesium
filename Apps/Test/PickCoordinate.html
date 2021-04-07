@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>鼠标拾取坐标</title>
+    <style>
+      @import url(./main.css);
+      #infoBox {
+        top: 0px;
+        position: absolute;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cesiumContainer"></div>
+    <div id="infoBox">
+      <div id="lon">经度</div>
+      <div id="lat">纬度</div>
+      <div id="height">高度</div>
+    </div>
+    <script type="module">
+      window.CESIUM_BASE_URL = "../../Source/";
+      import * as Cesium from "../../Source/Cesium.js";
+
+      let viewer = new Cesium.Viewer("cesiumContainer");
+      let scene = viewer.scene;
+      let handler = new Cesium.ScreenSpaceEventHandler(scene.canvas);
+
+      function getCoordinate(e) {
+        let _lonElm = document.getElementById("lon");
+        let _latElm = document.getElementById("lat");
+        let _height = document.getElementById("height");
+
+        let cartesian = viewer.camera.pickEllipsoid(
+          e.position,
+          scene.globe.ellipsoid
+        );
+        let cart = new Cesium.Cartographic();
+        cart = Cesium.Cartographic.fromCartesian(
+          cartesian,
+          Cesium.Ellipsoid.WGS84,
+          cart
+        );
+
+        _lonElm.innerHTML = cart.longitude + " r";
+        _latElm.innerHTML = cart.latitude + " r";
+        _height.innerHTML = cart.height + " m";
+      }
+      handler.setInputAction(
+        getCoordinate,
+        Cesium.ScreenSpaceEventType.LEFT_CLICK
+      );
+    </script>
+  </body>
+</html>
