@@ -42,6 +42,9 @@
           cart
         );
 
+        let long = Cesium.Math.toDegrees(cart.longitude);
+        let lat = Cesium.Math.toDegrees(cart.latitude);
+
         _lonElm.innerHTML = cart.longitude + " r";
         _latElm.innerHTML = cart.latitude + " r";
         _height.innerHTML = cart.height + " m";
